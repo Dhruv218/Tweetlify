@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Post.css";
 import Comment from "../../img/comment.png";
 import Share from "../../img/share.png";
-import Heart from "../../img/like.png";
+import Heart from "../../img/like.svg";
 import NotLike from "../../img/notlike.png";
 import { likePost } from "../../api/PostsRequests";
 import { useSelector } from "react-redux";
@@ -20,16 +20,18 @@ const Post = ({ data }) => {
   };
   return (
     <div className="Post">
+
       <img
         src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""}
         alt=""
       />
 
-      <div className="postReact">
+      <div className="postReact like-width">
         <img
           src={liked ? Heart : NotLike}
           alt=""
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer",    width: '31px'
+        }}
           onClick={handleLike}
         />
         <img src={Comment} alt="" />

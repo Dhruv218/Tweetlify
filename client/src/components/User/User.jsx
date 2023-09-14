@@ -18,15 +18,6 @@ const User = ({ person }) => {
   return (
     <div className="follower">
       <div>
-        <img
-          src={
-            publicFolder + person.profilePicture
-              ? publicFolder + person.profilePicture
-              : publicFolder + "defaultProfile.png"
-          }
-          alt="profile"
-          className="followerImage"
-        />
         <div className="name">
           <span>{person.firstname}</span>
           <span>@{person.username}</span>

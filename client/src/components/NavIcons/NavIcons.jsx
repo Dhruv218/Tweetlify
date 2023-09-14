@@ -5,12 +5,12 @@ import Noti from "../../img/noti.png";
 import Comment from "../../img/comment.png";
 import { UilSetting } from "@iconscout/react-unicons";
 import { Link } from "react-router-dom";
-
+import './navicons.css'
 const NavIcons = () => {
   return (
     <div className="navIcons">
       <Link to="../home">
-        <img src={Home} alt="" />
+        <img className="mixblend" src={Home} alt="" />
       </Link>
       <UilSetting />
       <img src={Noti} alt="" />
